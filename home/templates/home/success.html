@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+
+{% block title %}
+    success_portal
+{% endblock title %}
+
+
+
+{% block content %}
+
+    <h1>this is the success page</h1>
+    <a href="{% url 'home-page' %}">!!!!!!home!!!!!!</a>.............<a href="{% url 'about' %}">About</a>
+
+
+    <h1>The DATA base entered is..........</h1>
+
+    <p>
+        student id is  :{{student_id}}
+    </p>
+    <p>
+       student name is :{{student_name}}
+    </p>
+    <p>
+        student age is :{{student_age}}
+    </p>
+    <p>
+        going_to_school:{{student_going_school}}
+    </p>
+
+{% endblock content %}
+    
+    

@@ -1,0 +1,47 @@
+{% extends 'recipebase.html' %}
+
+
+
+{% block title %}
+    recipe_welcome_page
+{% endblock title %}
+
+
+
+{% block content %}
+    <h1>THIS RECIPE PAGE</h1>
+
+   <div class="container mt-5">
+    <form class="col-6 mx-auto card p-5 shadow-lg" method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+
+      <h2 class="container btn-warning p-3">recipe-form</h2>
+
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Recipe-name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1"  required aria-describedby="emailHelp" name="recipe_name">
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Recipe_description</label>
+          <textarea name="recipe_description" required class="form-control" ></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">recipe_image</label>
+          <input type="file" name="recipe_image" required  class="form-control">
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+      </form>
+
+
+   </div>
+
+
+{% endblock content %}
+    
+    

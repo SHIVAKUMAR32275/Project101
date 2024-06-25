@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+
+
+{% block title %}
+    review_list
+{% endblock title %}
+    
+
+
+{% block content %}
+    <h1>this is review list</h1>
+    
+    {% for review in reviews_list %}
+
+       <h3>
+        {{review.id}}
+        {{review.user_name}}
+        {{review.rating}}
+        {{review.feedback}}
+       </h3>
+    {% endfor %}
+        
+{% endblock content %}
+
+
+    
